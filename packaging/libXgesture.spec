@@ -1,5 +1,5 @@
-#sbs-git:slp/pkgs/xorg/lib/libxgesture libxgesture 0.1.0 589298a12fdb2ac318a89eb12e9afdab9aac402d
-Name:	libxgesture
+#sbs-git:slp/pkgs/xorg/lib/libXgesture libXgesture 0.1.0 589298a12fdb2ac318a89eb12e9afdab9aac402d
+Name:	libXgesture
 Summary:    X11 Gesture Extension library
 Version: 0.1.0
 Release:    2
@@ -13,7 +13,7 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xproto)
 BuildRequires:  pkgconfig(xextproto)
-BuildRequires:  pkgconfig(gestureproto)
+BuildRequires:  xorg-x11-proto-gesture
 BuildRequires:  pkgconfig(xorg-macros)
 
 
@@ -24,6 +24,7 @@ X.Org X11 libXt library
 %package devel
 Summary:    X11 Gesture Extension library (development headers)
 Group:      Development/Libraries
+Provides: libxgesture-devel 
 Requires:   %{name} = %{version}-%{release}
 Requires:   pkgconfig(x11), pkgconfig(xext), pkgconfig(gestureproto)
 
@@ -61,4 +62,3 @@ rm -rf %{buildroot}
 %{_includedir}/X11/extensions/*
 %{_libdir}/libXgesture.so
 %{_libdir}/pkgconfig/xgesture.pc
-
