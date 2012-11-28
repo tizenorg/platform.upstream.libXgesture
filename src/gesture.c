@@ -39,8 +39,8 @@
 #include <X11/extensions/gesture.h>
 #include <X11/extensions/gestureproto.h>
 
-#ifdef __XGESTURE_LIB_DEBUG__
 #include <stdio.h>
+#ifdef __XGESTURE_LIB_DEBUG__
 #define TRACE(msg)  fprintf(stderr, "[X11][GestureExt] %s\n", msg);
 #else
 #define TRACE(msg)
