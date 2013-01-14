@@ -46,6 +46,8 @@
 #define TRACE(msg)
 #endif
 
+extern const void* GetVersionInfo(Display *dpy);
+
 static XExtensionInfo _gesture_info_data;
 static XExtensionInfo *gesture_info = &_gesture_info_data;
 static char *gesture_extension_name = GESTURE_EXT_NAME;
