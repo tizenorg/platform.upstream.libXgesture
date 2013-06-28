@@ -6,6 +6,7 @@ Group:      System/Libraries
 License:    MIT
 URL:        http://www.x.org
 Source0:    %{name}-%{version}.tar.gz
+Source1001: 	libXgesture.manifest
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xproto)
@@ -34,6 +35,7 @@ Extension to the X protocol.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %reconfigure --disable-static
@@ -49,10 +51,12 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest %{name}.manifest
 %license COPYING
 %{_libdir}/libXgesture.so.*
 
 %files devel
+%manifest %{name}.manifest
 %{_includedir}/X11/extensions/*
 %{_libdir}/libXgesture.so
 %{_libdir}/pkgconfig/xgesture.pc
