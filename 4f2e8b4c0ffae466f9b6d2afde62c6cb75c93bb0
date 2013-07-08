@@ -1,0 +1,8 @@
+Change-Id: I4f2e8b4c0ffae466f9b6d2afde62c6cb75c93bb0
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:40:29 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4779
+Project: platform/upstream/libXgesture
+Branch: refs/heads/tizen
