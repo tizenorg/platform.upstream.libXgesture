@@ -1,4 +1,4 @@
-#  boilerplate
+#  Copyright (c) 2011 Samsung Electronics Co., Ltd All Rights Reserved 
 #
 #  Permission to use, copy, modify, distribute, and sell this software and its
 #  documentation for any purpose is hereby granted without fee, provided that
