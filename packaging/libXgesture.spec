@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:	libXgesture
 Summary:    X11 Gesture Extension library
 Version: 0.1.0
@@ -14,6 +16,9 @@ BuildRequires:  pkgconfig(xextproto)
 BuildRequires:  pkgconfig(gestureproto)
 BuildRequires:  pkgconfig(xorg-macros)
 
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 X.Org X11 libXt library
@@ -22,7 +27,7 @@ X.Org X11 libXt library
 %package devel
 Summary:    X11 Gesture Extension library (development headers)
 Group:      Development/Libraries
-Provides: libxgesture-devel 
+Provides: libxgesture-devel
 Requires:   %{name} = %{version}-%{release}
 Requires:   pkgconfig(x11)
 Requires:   pkgconfig(xext)
